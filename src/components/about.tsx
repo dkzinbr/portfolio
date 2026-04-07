@@ -29,10 +29,15 @@ export default function About() {
         <p className="mt-2 text-slate-400">São Paulo, Brasil</p>
 
         <p className="mt-6 max-w-2xl leading-7 text-slate-300">
-          Sou desenvolvedor web focado em React, Next.js, TypeScript e Tailwind.
-          Gosto de transformar ideias em interfaces modernas, responsivas e com
-          boa experiência de uso. Estou construindo projetos para fortalecer meu
-          portfólio e crescer profissionalmente na área.
+          Opa esse aqui na foto sou eu, tenho 23 anos e sou desenvolvedor a cerca de 1 ano,
+          trabalhei em uma start-up por 10 meses e foi onde me desenvolvi bastante,
+          nesse meio tempo me tornei pai de um menino lindo, o Klaus, e isso me motivou ainda mais a crescer 
+          profissionalmente para proporcionar uma vida melhor para ele.
+        </p>
+        <p className="mt-6 max-w-2xl leading-7 text-slate-300">
+          Sempre fui muito ligado a tecnologia, desde pequeno adorava desmontar aparelhos 
+          eletrônicos para entender como funcionavam, mexia em pastas e arquivos para melhorar
+          o desempenho de jogos, um inicio lindo de nerd raiz.
         </p>
 
       </div>

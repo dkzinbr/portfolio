@@ -13,10 +13,16 @@ export default function Header() {
           Sobre
         </a>
         <a href="#habilidades" className="text-sm text-slate-300 transition hover:text-blue-400">
-          Habilidades
+          Hard Skills
+        </a>
+        <a href="#softskills" className="text-sm text-slate-300 transition hover:text-blue-400">
+          Soft Skills
         </a>
         <a href="#projetos" className="text-sm text-slate-300 transition hover:text-blue-400">
           Projetos
+        </a>
+        <a href="#contato" className="text-sm text-slate-300 transition hover:text-blue-400">
+          Contato
         </a>
       </nav>
     </header>

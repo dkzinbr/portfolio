@@ -1,9 +1,11 @@
 import About from "@/src/components/about";
 import BackgroundGlow from "@/src/components/backgroundGlow";
+import Contact from "@/src/components/contact";
 import Header from "@/src/components/header";
 import Hero from "@/src/components/hero";
 import Projects from "@/src/components/project";
 import Skills from "@/src/components/skills";
+import SoftSkills from "@/src/components/softSkills";
 
 
 export default function Home() {
@@ -16,7 +18,9 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <SoftSkills />
         <Projects />
+        <Contact />
       </div>
     </main>
   );
