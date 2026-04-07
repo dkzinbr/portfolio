@@ -26,20 +26,6 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="mt-5 flex gap-3">
-                <a
-                  href={project.projectUrl}
-                  className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white"
-                >
-                  Ver projeto
-                </a>
-                <a
-                  href={project.githubUrl}
-                  className="rounded-lg border border-slate-700 px-4 py-2 text-sm font-medium text-white"
-                >
-                  GitHub
-                </a>
-              </div>
             </div>
           </article>
         ))}

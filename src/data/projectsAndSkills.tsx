@@ -26,7 +26,7 @@ export const projects = [
   },
   {
     title: "Landing Page",
-    description: "Página responsiva com foco em design, performance e UI.",
+    description: "Um presente para minha namorada, primeiro projeto que fiz sozinho.",
     image: "/project-3.png",
     projectUrl: "#",
     githubUrl: "#",

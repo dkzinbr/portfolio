@@ -20,13 +20,13 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap gap-4">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/henri-teodoro/"
             className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-500"
           >
             LinkedIn
           </a>
           <a
-            href="#"
+            href="https://github.com/dkzinbr"
             className="rounded-lg border border-slate-700 bg-[#0B1228]/70 px-5 py-3 text-sm font-medium text-white transition hover:border-blue-500"
           >
             GitHub

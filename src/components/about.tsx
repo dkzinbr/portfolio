@@ -35,20 +35,6 @@ export default function About() {
           portfólio e crescer profissionalmente na área.
         </p>
 
-        <div className="mt-8 flex gap-4">
-          <a
-            href="#"
-            className="rounded-lg bg-blue-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-blue-500"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="#"
-            className="rounded-lg border border-slate-700 bg-[#0B1228]/70 px-5 py-3 text-sm font-medium text-white transition hover:border-blue-500"
-          >
-            Currículo
-          </a>
-        </div>
       </div>
     </section>
   );
