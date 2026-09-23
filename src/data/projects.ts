@@ -14,6 +14,21 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Luck’s Style",
+    category: "Site institucional · Negócio local · 2026",
+    summary:
+      "Experiência digital criada para uma barbearia real, conectando marca, equipe, serviços e canais de conversão em uma navegação responsiva.",
+    highlights: [
+      "Agendamento externo, WhatsApp e Google Maps",
+      "Apresentação de planos e catálogo de produtos",
+      "Galerias de equipe e cortes com imagens otimizadas",
+    ],
+    image: "/project-lucks-style.png",
+    imageAlt: "Tela inicial do site da Barbearia Luck’s Style",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://barbearialucksstyle.com",
+  },
+  {
     title: "Portfólio profissional",
     category: "Produto pessoal · 2026",
     summary:
@@ -42,19 +57,5 @@ export const projects: Project[] = [
     image: "/project-1.png",
     imageAlt: "Tela do Task App com a lista de tarefas",
     tags: ["React", "TypeScript", "Tailwind"],
-  },
-  {
-    title: "Landing Page",
-    category: "Landing page · Projeto autoral",
-    summary:
-      "Landing page desenvolvida do zero para praticar estrutura semântica, composição visual responsiva e interações sem frameworks.",
-    highlights: [
-      "HTML semântico",
-      "CSS responsivo",
-      "Interações em JavaScript",
-    ],
-    image: "/project-3.png",
-    imageAlt: "Tela de uma landing page autoral",
-    tags: ["HTML", "CSS", "JavaScript"],
   },
 ];
