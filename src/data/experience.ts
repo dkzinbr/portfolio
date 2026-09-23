@@ -15,20 +15,20 @@ export const experience = {
 export const workingPrinciples = [
   {
     number: "01",
-    title: "Clareza antes da complexidade",
+    title: "Problema antes da solução",
     description:
-      "Entendo o problema e organizo a solução antes de começar a escrever código.",
+      "Investigo a causa e defino o resultado esperado antes de alterar o código.",
   },
   {
     number: "02",
-    title: "Comunicação aberta",
+    title: "Componentes reutilizáveis",
     description:
-      "Compartilho contexto, sinalizo bloqueios e transformo decisões em próximos passos.",
+      "Extraio padrões de interface para reduzir repetição e manter consistência.",
   },
   {
     number: "03",
-    title: "Evolução contínua",
+    title: "Entregas pequenas",
     description:
-      "Uso feedback, revisão e estudo constante para melhorar cada entrega.",
+      "Divido o escopo em mudanças menores, mais fáceis de revisar e evoluir.",
   },
 ] as const;
