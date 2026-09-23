@@ -86,14 +86,6 @@ export default function RootLayout({
       className={`${poppins.variable} ${jetBrainsMono.variable}`}
     >
       <body className="font-sans">
-        {/* Marca que o JavaScript está ativo antes da primeira pintura, para que as
-            animações de entrada nunca escondam conteúdo em navegadores sem JS. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.documentElement.classList.add("js")`,
-          }}
-        />
-
         <a
           href="#conteudo"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"

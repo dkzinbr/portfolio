@@ -38,20 +38,22 @@ body {
   border-radius: 4px;
 }
 
-/* Revelação no scroll. O estado inicial só é aplicado quando há JavaScript,
-   para que o conteúdo continue visível caso o script não execute. */
-.js [data-reveal] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
-  transition-delay: var(--reveal-delay, 0ms);
-}
+/* Revelação no scroll. O estado inicial escondido só vale quando há JavaScript
+   para revelar depois, então sem JS o conteúdo continua visível. */
+@media (scripting: enabled) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
 
-.js [data-reveal][data-visible="true"] {
-  opacity: 1;
-  transform: none;
+  [data-reveal][data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @keyframes menu-in {
@@ -90,7 +92,7 @@ body {
     scroll-behavior: auto;
   }
 
-  .js [data-reveal] {
+  [data-reveal] {
     opacity: 1;
     transform: none;
     transition: none;
