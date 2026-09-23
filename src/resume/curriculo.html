@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Currículo — Henri Teodoro</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #eef1f5;
+        color: #172033;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.45;
+      }
+
+      main {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 17mm 18mm 15mm;
+        background: white;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12mm;
+        align-items: end;
+        padding-bottom: 9mm;
+        border-bottom: 1px solid #dbe1ea;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 29pt;
+        line-height: 1;
+        letter-spacing: -1.4px;
+        color: #0b1020;
+      }
+
+      .role {
+        margin: 3mm 0 0;
+        color: #087ca7;
+        font-size: 12pt;
+        font-weight: 700;
+      }
+
+      .contact {
+        display: grid;
+        gap: 1.6mm;
+        text-align: right;
+        font-size: 8.8pt;
+      }
+
+      a {
+        color: #344054;
+        text-decoration: none;
+      }
+
+      section {
+        display: grid;
+        grid-template-columns: 31mm 1fr;
+        gap: 8mm;
+        padding-top: 8mm;
+      }
+
+      h2 {
+        margin: 0;
+        color: #087ca7;
+        font-size: 8.5pt;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+      }
+
+      h3 {
+        margin: 0;
+        color: #101828;
+        font-size: 11pt;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .muted {
+        color: #667085;
+      }
+
+      .lead {
+        color: #344054;
+        font-size: 10.8pt;
+        line-height: 1.55;
+      }
+
+      .entry + .entry {
+        margin-top: 5mm;
+        padding-top: 5mm;
+        border-top: 1px solid #eaecf0;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 8mm;
+      }
+
+      .meta {
+        flex: none;
+        color: #667085;
+        font-size: 8.5pt;
+      }
+
+      ul {
+        margin: 3mm 0 0;
+        padding-left: 4.5mm;
+      }
+
+      li {
+        margin: 1mm 0;
+        color: #475467;
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm 10mm;
+      }
+
+      .skills h3 {
+        margin-bottom: 1.5mm;
+        font-size: 9.5pt;
+      }
+
+      .skills p {
+        color: #475467;
+        font-size: 9pt;
+      }
+
+      .project-title {
+        display: inline;
+      }
+
+      .project-stack {
+        margin-left: 2mm;
+        color: #087ca7;
+        font-size: 8.5pt;
+        font-weight: 700;
+      }
+
+      footer {
+        margin-top: 8mm;
+        padding-top: 4mm;
+        border-top: 1px solid #dbe1ea;
+        color: #667085;
+        font-size: 8pt;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Henri Teodoro</h1>
+          <p class="role">Desenvolvedor Full-stack</p>
+        </div>
+        <div class="contact">
+          <span>São Paulo, Brasil</span>
+          <a href="mailto:henriteo23@gmail.com">henriteo23@gmail.com</a>
+          <a href="https://www.linkedin.com/in/henri-teodoro/">
+            linkedin.com/in/henri-teodoro
+          </a>
+          <a href="https://github.com/dkzinbr">github.com/dkzinbr</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Perfil</h2>
+        <p class="lead">
+          Desenvolvedor full-stack com experiência prática em ambiente de startup,
+          trabalhando com React, Next.js, TypeScript e Node.js. Atuo entre interface e
+          back-end, com atenção à experiência de uso, responsividade, acessibilidade e
+          código legível.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experiência</h2>
+        <div class="entry">
+          <div class="entry-head">
+            <div>
+              <h3>Desenvolvimento full-stack</h3>
+              <p class="muted">Startup de tecnologia</p>
+            </div>
+            <span class="meta">10 meses de experiência</span>
+          </div>
+          <ul>
+            <li>Desenvolvimento e manutenção de interfaces responsivas.</li>
+            <li>Integração entre front-end e APIs.</li>
+            <li>Investigação de problemas e evolução contínua de funcionalidades.</li>
+            <li>Colaboração em um ambiente dinâmico, do entendimento à entrega.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projetos</h2>
+        <div>
+          <div class="entry">
+            <h3 class="project-title">Portfólio profissional</h3>
+            <span class="project-stack">Next.js · TypeScript · Tailwind CSS</span>
+            <p class="muted">
+              Plataforma pessoal com geração estática, SEO técnico, dados estruturados e
+              navegação acessível.
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="project-title">Task App</h3>
+            <span class="project-stack">React · TypeScript · Tailwind CSS</span>
+            <p class="muted">
+              Aplicação de tarefas com componentes reutilizáveis, filtros e estados de
+              interface tipados.
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="project-title">Landing Page</h3>
+            <span class="project-stack">HTML · CSS · JavaScript</span>
+            <p class="muted">
+              Página autoral responsiva construída sem frameworks, com estrutura semântica
+              e interações em JavaScript.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Competências</h2>
+        <div class="skills">
+          <div>
+            <h3>Stack principal</h3>
+            <p>TypeScript, React, Next.js e Node.js</p>
+          </div>
+          <div>
+            <h3>Interface</h3>
+            <p>HTML, CSS, JavaScript e Tailwind CSS</p>
+          </div>
+          <div>
+            <h3>Ferramentas</h3>
+            <p>Git e GitHub</p>
+          </div>
+          <div>
+            <h3>Práticas</h3>
+            <p>Responsividade, acessibilidade, componentização e integração com APIs</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Portfólio: portfolio-henri.vercel.app
+      </footer>
+    </main>
+  </body>
+</html>
