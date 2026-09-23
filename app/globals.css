@@ -1,12 +1,114 @@
 @import "tailwindcss";
 
+@theme {
+  --color-night: #050816;
+  --color-surface: #0b1228;
+  --color-line: #1e2b4a;
+  --color-ink: #e6ecfb;
+  --color-muted: #94a3b8;
+  --color-brand: #3b82f6;
+  --color-brand-light: #60a5fa;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
 html {
   scroll-behavior: smooth;
+  /* Compensa o header fixo ao navegar pelas âncoras. */
+  scroll-padding-top: 5.5rem;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: #050816;
+  background: var(--color-night);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-brand) 35%, transparent);
   color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Revelação no scroll. O estado inicial escondido só vale quando há JavaScript
+   para revelar depois, então sem JS o conteúdo continua visível. */
+@media (scripting: enabled) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  [data-reveal][data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-menu-in {
+  animation: menu-in 0.2s ease-out;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, #34d399 55%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-pulse-ring,
+  .animate-menu-in {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -1,27 +1,46 @@
-import About from "@/src/components/about";
-import BackgroundGlow from "@/src/components/backgroundGlow";
-import Contact from "@/src/components/contact";
-import Header from "@/src/components/header";
-import Hero from "@/src/components/hero";
-import Projects from "@/src/components/project";
-import Skills from "@/src/components/skills";
-import SoftSkills from "@/src/components/softSkills";
+import About from "@/src/components/sections/about";
+import Contact from "@/src/components/sections/contact";
+import Hero from "@/src/components/sections/hero";
+import Projects from "@/src/components/sections/projects";
+import Skills from "@/src/components/sections/skills";
+import SoftSkills from "@/src/components/sections/soft-skills";
+import { profile, siteUrl } from "@/src/data/profile";
+import { skillGroups } from "@/src/data/skills";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.fullName,
+  jobTitle: profile.role,
+  description: profile.headline,
+  url: siteUrl,
+  image: `${siteUrl}/perfil.jpg`,
+  email: `mailto:${profile.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "São Paulo",
+    addressCountry: "BR",
+  },
+  sameAs: [profile.links.github, profile.links.linkedin],
+  knowsAbout: skillGroups.flatMap((group) => group.skills.map((skill) => skill.name)),
+};
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#050816] text-white">
-      <BackgroundGlow />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-10">
-        <Header />
-        <Hero />
-        <About />
-        <Skills />
-        <SoftSkills />
-        <Projects />
-        <Contact />
-      </div>
-    </main>
+      <Hero />
+      <About />
+      <Skills />
+      <SoftSkills />
+      <Projects />
+      <Contact />
+    </>
   );
 }
