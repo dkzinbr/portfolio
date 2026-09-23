@@ -22,32 +22,33 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "#050816",
+          background: "#07090f",
           backgroundImage:
-            "radial-gradient(circle at 15% 15%, rgba(37,99,235,0.45), transparent 45%), radial-gradient(circle at 85% 80%, rgba(34,211,238,0.28), transparent 45%)",
+            "linear-gradient(rgba(148,163,184,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,0.07) 1px, transparent 1px), radial-gradient(circle at 85% 20%, rgba(56,189,248,0.22), transparent 38%)",
+          backgroundSize: "72px 72px, 72px 72px, 100% 100%",
           color: "white",
         }}
       >
         <div
           style={{
             display: "flex",
-            fontSize: 26,
-            color: "#60a5fa",
-            letterSpacing: 6,
+            fontSize: 24,
+            color: "#7dd3fc",
+            letterSpacing: 5,
             textTransform: "uppercase",
           }}
         >
-          {"<"}Henri {"/"}
-          {">"}
+          PORTFÓLIO / DESENVOLVIMENTO FULL-STACK
         </div>
 
         <div
           style={{
             display: "flex",
             marginTop: 28,
-            fontSize: 74,
-            fontWeight: 800,
-            lineHeight: 1.1,
+            fontSize: 82,
+            fontWeight: 700,
+            lineHeight: 1,
+            letterSpacing: -4,
           }}
         >
           {profile.fullName}
@@ -57,22 +58,22 @@ export default function OpenGraphImage() {
           style={{
             display: "flex",
             marginTop: 18,
-            fontSize: 40,
-            color: "#93c5fd",
+            fontSize: 36,
+            color: "#e2e8f0",
           }}
         >
-          {profile.role}
+          Interfaces claras. Integrações confiáveis.
         </div>
 
         <div
           style={{
             display: "flex",
             marginTop: 44,
-            fontSize: 28,
-            color: "#94a3b8",
+            fontSize: 24,
+            color: "#9aa4b5",
           }}
         >
-          React · Next.js · TypeScript · Node.js · Tailwind
+          React · Next.js · TypeScript · Node.js
         </div>
       </div>
     ),
