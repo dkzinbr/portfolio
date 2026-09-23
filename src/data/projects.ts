@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "SEO técnico e dados estruturados",
       "Navegação acessível e responsiva",
     ],
-    image: "/project-2.png",
+    image: "/project-portfolio-v2.png",
     imageAlt: "Tela inicial do portfólio profissional de Henri Teodoro",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     repoUrl: "https://github.com/dkzinbr/portfolio",
