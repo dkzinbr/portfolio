@@ -15,7 +15,7 @@ export const profile = {
   headline:
     "Construo produtos digitais claros, rápidos e confiáveis — da interface à integração com APIs.",
   summary:
-    "Desenvolvedor full-stack com experiência prática em ambiente de startup, trabalhando com React, Next.js, TypeScript e Node.js.",
+    "Desenvolvedor full-stack com experiência em aplicações web, suporte técnico e análise de dados, trabalhando com React, Next.js, TypeScript e Node.js.",
   availability: "Disponível para novas oportunidades",
   email: "henriteo23@gmail.com",
   whatsappNumber: "5511981798126",
@@ -35,13 +35,13 @@ export const whatsappLink = `https://api.whatsapp.com/send/?phone=${
 }&text=${encodeURIComponent(whatsappMessage)}&type=phone_number&app_absent=0`;
 
 export const professionalFacts = [
-  { label: "Experiência", value: "10 meses em startup" },
-  { label: "Atuação", value: "Front-end e back-end" },
+  { label: "Experiência", value: "1+ ano em tecnologia" },
+  { label: "Atuação", value: "Desenvolvimento e TI" },
   { label: "Base", value: profile.location },
 ] as const;
 
 export const bio = [
-  "Sou desenvolvedor full-stack de São Paulo e encontrei no software uma forma de transformar curiosidade em produtos úteis. Minha experiência em startup consolidou uma abordagem prática: entender o problema, construir com clareza e evoluir a solução a partir de feedback.",
+  "Sou desenvolvedor full-stack de São Paulo e encontrei no software uma forma de transformar curiosidade em produtos úteis. Minhas experiências na Nexo Sistemas e ADC Benefícios consolidaram uma abordagem prática: entender o problema, construir com clareza e evoluir a solução a partir de feedback.",
   "Atuo entre interface e back-end, com atenção especial à experiência de uso, responsividade, acessibilidade e código legível. Busco equipes que valorizem colaboração, qualidade técnica e aprendizado contínuo.",
 ] as const;
 
