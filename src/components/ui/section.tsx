@@ -5,7 +5,8 @@ import Reveal from "@/src/components/ui/reveal";
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-brand-light">
+    <span className="inline-flex items-center gap-3 font-mono text-[0.7rem] font-medium uppercase tracking-[0.18em] text-brand-light">
+      <span aria-hidden="true" className="h-px w-7 bg-brand/70" />
       {children}
     </span>
   );
@@ -34,27 +35,28 @@ export default function Section({
     <section
       id={id}
       aria-labelledby={headingId}
-      className={cn("py-20 md:py-24", className)}
+      className={cn("py-20 md:py-28", className)}
     >
       <Reveal>
-        <div className="max-w-2xl">
-          {eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}
-          <h2
-            id={headingId}
-            className={cn(
-              "text-3xl font-bold uppercase tracking-tight md:text-4xl",
-              eyebrow && "mt-5",
-            )}
-          >
-            {title}
-          </h2>
-          {description ? (
-            <p className="mt-4 leading-7 text-muted">{description}</p>
-          ) : null}
+        <div className="grid gap-5 md:grid-cols-[180px_1fr] md:gap-10">
+          <div>{eyebrow ? <Eyebrow>{eyebrow}</Eyebrow> : null}</div>
+          <div className="max-w-3xl">
+            <h2
+              id={headingId}
+              className="text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-5xl"
+            >
+              {title}
+            </h2>
+            {description ? (
+              <p className="mt-5 max-w-2xl text-base leading-8 text-muted md:text-lg">
+                {description}
+              </p>
+            ) : null}
+          </div>
         </div>
       </Reveal>
 
-      <div className="mt-10 md:mt-12">{children}</div>
+      <div className="mt-12 md:mt-16">{children}</div>
     </section>
   );
 }

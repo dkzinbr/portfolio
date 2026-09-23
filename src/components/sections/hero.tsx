@@ -1,59 +1,43 @@
-import { FaArrowRight, FaGithub, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import { FaArrowRight, FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 import Reveal from "@/src/components/ui/reveal";
-import { profile, stats } from "@/src/data/profile";
-import { surfaceCard } from "@/src/lib/ui";
-
-const codeLines = [
-  { indent: 0, content: "const henri = {" },
-  { indent: 1, content: `cargo: "Full-stack",`, accent: true },
-  { indent: 1, content: `base: "São Paulo, BR",`, accent: true },
-  { indent: 1, content: "stack: [", accent: true },
-  { indent: 2, content: `"React", "Next.js",`, accent: true },
-  { indent: 2, content: `"TypeScript", "Node.js",`, accent: true },
-  { indent: 1, content: "],", accent: true },
-  { indent: 1, content: "cafesPorDia: Infinity,", accent: true },
-  { indent: 0, content: "};" },
-];
+import { professionalFacts, profile } from "@/src/data/profile";
 
 export default function Hero() {
   return (
     <section
       id="home"
       aria-labelledby="home-titulo"
-      className="grid items-center gap-12 py-16 md:min-h-[85vh] md:grid-cols-2 md:py-20"
+      className="grid items-center gap-14 pb-24 pt-16 md:min-h-[calc(100vh-76px)] md:pb-28 md:pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20"
     >
       <Reveal>
-        <p className="inline-flex items-center gap-2.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-300">
-          <span
-            aria-hidden="true"
-            className="animate-pulse-ring h-2 w-2 rounded-full bg-emerald-400"
-          />
-          {profile.availability}
+        <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-brand-light">
+          {profile.role}
         </p>
 
         <h1
           id="home-titulo"
-          className="mt-6 max-w-xl text-4xl font-extrabold leading-[1.1] tracking-tight md:text-6xl"
+          className="mt-6 max-w-3xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl md:text-7xl lg:text-[5.6rem]"
         >
-          Olá, eu sou o{" "}
-          <span className="bg-gradient-to-r from-brand-light to-brand bg-clip-text text-transparent">
-            {profile.firstName}
-          </span>
-          , desenvolvedor{" "}
-          <span className="whitespace-nowrap">full-stack</span>.
+          {profile.fullName}
         </h1>
 
-        <p className="mt-6 max-w-lg text-base leading-7 text-slate-300 md:text-lg">
+        <p className="mt-8 max-w-2xl text-xl font-medium leading-8 tracking-[-0.02em] text-slate-200 md:text-2xl md:leading-9">
           {profile.headline}
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-3">
+        <p className="mt-5 max-w-xl text-base leading-7 text-muted">
+          {profile.summary}
+        </p>
+
+        <div className="mt-9 flex flex-wrap items-center gap-3">
           <a
             href="#projetos"
-            className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-brand to-[#1d4ed8] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(37,99,235,0.3)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(37,99,235,0.4)]"
+            className="group inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold text-night transition hover:-translate-y-0.5 hover:bg-brand-light"
           >
-            Ver projetos
+            Ver projetos selecionados
             <FaArrowRight
               aria-hidden="true"
               className="text-xs transition group-hover:translate-x-0.5"
@@ -61,77 +45,84 @@ export default function Hero() {
           </a>
 
           <a
-            href="#contato"
-            className="inline-flex items-center gap-2 rounded-xl border border-line bg-surface/70 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-brand/60"
+            href={profile.resumeUrl}
+            download
+            className="inline-flex items-center gap-2 rounded-lg border border-line bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-brand-light"
           >
-            Entrar em contato
+            <FaDownload aria-hidden="true" className="text-xs" />
+            Baixar currículo
           </a>
-
-          <div className="flex items-center gap-2">
-            <a
-              href={profile.links.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Perfil no LinkedIn (abre em nova aba)"
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-surface/70 text-slate-300 transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-white"
-            >
-              <FaLinkedin aria-hidden="true" className="text-xl" />
-            </a>
-            <a
-              href={profile.links.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Perfil no GitHub (abre em nova aba)"
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-line bg-surface/70 text-slate-300 transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-white"
-            >
-              <FaGithub aria-hidden="true" className="text-xl" />
-            </a>
-          </div>
         </div>
 
-        <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="border-l border-line pl-4">
-              <dt className="sr-only">{stat.label}</dt>
-              <dd>
-                <span className="block text-2xl font-bold text-white md:text-3xl">
-                  {stat.value}
-                </span>
-                <span className="mt-1 block text-xs leading-5 text-muted">
-                  {stat.label}
-                </span>
-              </dd>
+        <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3">
+          <a
+            href={profile.links.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted transition hover:text-white"
+          >
+            <FaLinkedin aria-hidden="true" />
+            LinkedIn
+            <span className="sr-only">(abre em nova aba)</span>
+          </a>
+          <a
+            href={profile.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted transition hover:text-white"
+          >
+            <FaGithub aria-hidden="true" />
+            GitHub
+            <span className="sr-only">(abre em nova aba)</span>
+          </a>
+        </div>
+
+        <dl className="mt-12 grid gap-5 border-t border-line pt-6 sm:grid-cols-3">
+          {professionalFacts.map((fact) => (
+            <div key={fact.label}>
+              <dt className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-slate-500">
+                {fact.label}
+              </dt>
+              <dd className="mt-2 text-sm font-medium text-slate-200">{fact.value}</dd>
             </div>
           ))}
         </dl>
       </Reveal>
 
       <Reveal delay={120}>
-        <div
-          className={`${surfaceCard} p-5 shadow-[0_0_40px_rgba(37,99,235,0.1)] md:p-6`}
-        >
-          <div className="mb-5 flex items-center gap-2">
-            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-red-400/70" />
-            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-yellow-400/70" />
-            <span aria-hidden="true" className="h-3 w-3 rounded-full bg-green-400/70" />
-            <span className="ml-2 font-mono text-xs text-muted">henri.ts</span>
-          </div>
+        <div className="relative mx-auto max-w-[430px] lg:ml-auto">
+          <div className="absolute -inset-3 -z-10 rounded-[2rem] border border-brand/10 bg-brand/[0.025]" />
+          <div className="overflow-hidden rounded-[1.6rem] border border-line bg-surface p-2 shadow-[0_30px_100px_rgba(0,0,0,0.35)]">
+            <div className="relative overflow-hidden rounded-[1.15rem]">
+              <Image
+                src="/perfil.jpg"
+                alt={`Retrato de ${profile.fullName}`}
+                width={739}
+                height={1304}
+                priority
+                sizes="(min-width: 1024px) 430px, (min-width: 640px) 55vw, 90vw"
+                className="aspect-[4/5] w-full object-cover object-[50%_28%] saturate-[0.85]"
+              />
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#07090f] via-[#07090f]/45 to-transparent" />
 
-          <pre className="overflow-x-auto font-mono text-xs leading-7 text-slate-300 md:text-sm">
-            <code>
-              {codeLines.map((line, index) => (
-                <span key={line.content} className="flex gap-4">
-                  <span aria-hidden="true" className="w-4 shrink-0 text-right text-slate-600">
-                    {index + 1}
-                  </span>
-                  <span className={line.accent ? "text-brand-light" : "text-slate-200"}>
-                    {"  ".repeat(line.indent)}
-                    {line.content}
-                  </span>
-                </span>
-              ))}
-            </code>
-          </pre>
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <p className="flex items-center gap-2 text-sm font-medium text-white">
+                  <span
+                    aria-hidden="true"
+                    className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.7)]"
+                  />
+                  {profile.availability}
+                </p>
+                <p className="mt-3 flex items-center gap-2 text-sm text-slate-300">
+                  <FaLocationDot aria-hidden="true" className="text-brand-light" />
+                  {profile.location}
+                </p>
+              </div>
+            </div>
+          </div>
+          <p className="absolute -right-4 top-10 hidden rounded-lg border border-line bg-night/90 px-3 py-2 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted shadow-xl backdrop-blur md:block">
+            React · Next.js · Node.js
+          </p>
         </div>
       </Reveal>
     </section>

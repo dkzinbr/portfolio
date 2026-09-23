@@ -12,21 +12,20 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line py-10">
-      <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+    <footer className="border-t border-line py-10 md:py-12">
+      <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="text-sm font-semibold text-white">
-            {"<"}Henri <span className="text-brand">/</span>
-            {">"}
+          <p className="font-mono text-lg font-semibold text-white">
+            HT<span className="text-brand">.</span>
           </p>
-          <p className="mt-2 text-sm text-muted">
-            © {new Date().getFullYear()} {profile.fullName}. Feito com Next.js,
-            TypeScript e Tailwind CSS.
+          <p className="mt-3 max-w-md text-sm leading-6 text-muted">
+            © {new Date().getFullYear()} {profile.fullName}. Desenvolvido com Next.js,
+            TypeScript e atenção aos detalhes.
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
-          <ul className="flex items-center gap-2">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <ul className="flex flex-wrap items-center gap-x-5 gap-y-3">
             {socials.map((social) => {
               const Icon = social.icon;
 
@@ -41,9 +40,10 @@ export default function Footer() {
                         ? `${social.label} (abre em nova aba)`
                         : social.label
                     }
-                    className="flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-surface/70 text-slate-300 transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-white"
+                    className="inline-flex items-center gap-2 text-sm text-muted transition hover:text-white"
                   >
-                    <Icon aria-hidden="true" className="text-lg" />
+                    <Icon aria-hidden="true" />
+                    {social.label}
                   </a>
                 </li>
               );
@@ -52,7 +52,7 @@ export default function Footer() {
 
           <a
             href="#home"
-            className="ml-2 inline-flex items-center gap-2 rounded-xl border border-line bg-surface/70 px-4 py-2.5 text-sm text-slate-300 transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-white"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition hover:text-brand-light"
           >
             <FaArrowUp aria-hidden="true" className="text-xs" />
             Voltar ao topo

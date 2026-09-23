@@ -1,4 +1,5 @@
-import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FaDownload, FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 import Reveal from "@/src/components/ui/reveal";
 import { Eyebrow } from "@/src/components/ui/section";
@@ -6,54 +7,83 @@ import { emailLink, profile, whatsappLink } from "@/src/data/profile";
 
 export default function Contact() {
   return (
-    <section id="contato" aria-labelledby="contato-titulo" className="py-20 md:py-24">
+    <section id="contato" aria-labelledby="contato-titulo" className="py-20 md:py-28">
       <Reveal>
-        <div className="overflow-hidden rounded-3xl border border-line bg-surface/70 p-8 shadow-[0_18px_50px_rgba(15,23,42,0.32)] backdrop-blur-sm md:p-12">
-          <div className="max-w-2xl">
-            <Eyebrow>Contato</Eyebrow>
+        <div className="relative overflow-hidden rounded-3xl border border-line bg-surface/70 p-8 shadow-[0_30px_90px_rgba(0,0,0,0.22)] md:p-12 lg:p-14">
+          <div
+            aria-hidden="true"
+            className="absolute right-[-10rem] top-[-10rem] h-80 w-80 rounded-full bg-brand/10 blur-[100px]"
+          />
 
-            <h2
-              id="contato-titulo"
-              className="mt-5 text-3xl font-bold uppercase tracking-tight md:text-4xl"
-            >
-              Gostou de algo que viu?
-            </h2>
+          <div className="relative grid gap-10 lg:grid-cols-[1fr_0.7fr] lg:items-end">
+            <div className="max-w-3xl">
+              <Eyebrow>05 / Contato</Eyebrow>
 
-            <p className="mt-4 max-w-xl leading-7 text-slate-300">
-              Clique em um dos botões abaixo para falar comigo. Obrigado por visitar
-              esse espaço que criei com tanto carinho.
-            </p>
+              <h2
+                id="contato-titulo"
+                className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.04em] text-white md:text-5xl"
+              >
+                Vamos conversar sobre a próxima oportunidade.
+              </h2>
+
+              <p className="mt-5 max-w-2xl text-base leading-8 text-muted">
+                Se você procura um desenvolvedor com atenção à interface, organização
+                de código e disposição para aprender, estou disponível para conversar.
+              </p>
+
+              <a
+                href={emailLink}
+                className="group mt-8 inline-flex items-center gap-3 text-lg font-semibold text-white transition hover:text-brand-light md:text-xl"
+              >
+                <FaEnvelope aria-hidden="true" className="text-brand" />
+                {profile.email}
+                <FaArrowUpRightFromSquare
+                  aria-hidden="true"
+                  className="text-xs text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
+              </a>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              <a
+                href={profile.links.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-xl border border-line bg-white/[0.03] px-5 py-4 text-sm font-medium text-slate-200 transition hover:border-brand/50 hover:bg-brand/[0.06] hover:text-white"
+              >
+                <span className="flex items-center gap-3">
+                  <FaLinkedin aria-hidden="true" className="text-brand-light" />
+                  LinkedIn
+                </span>
+                <FaArrowUpRightFromSquare aria-hidden="true" className="text-xs" />
+              </a>
+              <a
+                href={profile.resumeUrl}
+                download
+                className="flex items-center justify-between rounded-xl border border-line bg-white/[0.03] px-5 py-4 text-sm font-medium text-slate-200 transition hover:border-brand/50 hover:bg-brand/[0.06] hover:text-white"
+              >
+                <span className="flex items-center gap-3">
+                  <FaDownload aria-hidden="true" className="text-brand-light" />
+                  Currículo em PDF
+                </span>
+                <span className="font-mono text-[0.6rem] uppercase tracking-wider text-slate-500">
+                  Download
+                </span>
+              </a>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between rounded-xl border border-line bg-white/[0.03] px-5 py-4 text-sm font-medium text-slate-200 transition hover:border-emerald-400/40 hover:bg-emerald-400/[0.05] hover:text-white"
+              >
+                <span className="flex items-center gap-3">
+                  <FaWhatsapp aria-hidden="true" className="text-emerald-400" />
+                  WhatsApp
+                </span>
+                <FaArrowUpRightFromSquare aria-hidden="true" className="text-xs" />
+              </a>
+            </div>
           </div>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 rounded-xl border border-emerald-400/30 bg-gradient-to-r from-[#25D366] to-[#128C7E] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(37,211,102,0.24)] transition hover:-translate-y-0.5 hover:border-emerald-300/60 hover:shadow-[0_18px_40px_rgba(37,211,102,0.32)]"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/20 transition group-hover:bg-white/25">
-                <FaWhatsapp aria-hidden="true" className="text-xl" />
-              </span>
-              WhatsApp
-              <span className="sr-only">(abre em nova aba)</span>
-            </a>
-
-            <a
-              href={emailLink}
-              className="group inline-flex items-center gap-3 rounded-xl border border-line bg-[#101935] px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(15,23,42,0.28)] transition hover:-translate-y-0.5 hover:border-brand/60 hover:bg-[#132041] hover:shadow-[0_18px_40px_rgba(59,130,246,0.16)]"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/15 transition group-hover:bg-white/15">
-                <FaEnvelope aria-hidden="true" className="text-lg" />
-              </span>
-              E-mail
-            </a>
-          </div>
-
-          <p className="mt-6 text-sm text-muted">
-            Ou copie o meu e-mail:{" "}
-            <span className="font-mono text-slate-300">{profile.email}</span>
-          </p>
         </div>
       </Reveal>
     </section>

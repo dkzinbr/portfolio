@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Poppins } from "next/font/google";
+import { JetBrains_Mono, Manrope } from "next/font/google";
 
 import BackgroundGlow from "@/src/components/layout/background-glow";
 import Footer from "@/src/components/layout/footer";
@@ -8,11 +8,10 @@ import { profile, siteUrl } from "@/src/data/profile";
 
 import "./globals.css";
 
-const poppins = Poppins({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-poppins",
+  variable: "--font-manrope",
 });
 
 const jetBrainsMono = JetBrains_Mono({
@@ -21,8 +20,8 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const title = `${profile.firstName} | Portfólio`;
-const description = profile.headline;
+const title = `${profile.fullName} | Desenvolvedor Full-stack`;
+const description = `${profile.headline} ${profile.summary}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050816",
+  themeColor: "#07090f",
   colorScheme: "dark",
 };
 
@@ -83,7 +82,7 @@ export default function RootLayout({
     <html
       lang="pt-BR"
       data-scroll-behavior="smooth"
-      className={`${poppins.variable} ${jetBrainsMono.variable}`}
+      className={`${manrope.variable} ${jetBrainsMono.variable}`}
     >
       <body className="font-sans">
         <a
@@ -98,7 +97,7 @@ export default function RootLayout({
         <div className="relative min-h-screen overflow-x-clip bg-night">
           <BackgroundGlow />
 
-          <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-10">
+          <div className="relative z-10 mx-auto max-w-7xl px-6 md:px-10 lg:px-12">
             <Header />
             <main id="conteudo">{children}</main>
             <Footer />
