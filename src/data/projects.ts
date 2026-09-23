@@ -1,6 +1,8 @@
 export type Project = {
   title: string;
-  description: string;
+  category: string;
+  summary: string;
+  highlights: string[];
   image: string;
   imageAlt: string;
   tags: string[];
@@ -12,28 +14,47 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Portfólio profissional",
+    category: "Produto pessoal · 2026",
+    summary:
+      "Plataforma pessoal criada para apresentar experiência, projetos e competências com uma navegação rápida e acessível.",
+    highlights: [
+      "App Router e geração estática",
+      "SEO técnico e dados estruturados",
+      "Navegação acessível e responsiva",
+    ],
+    image: "/project-portfolio-v2.png",
+    imageAlt: "Tela inicial do portfólio profissional de Henri Teodoro",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    repoUrl: "https://github.com/dkzinbr/portfolio",
+    liveUrl: "https://portfolio-henri.vercel.app",
+  },
+  {
     title: "Task App",
-    description:
-      "Aplicação de tarefas com interface moderna e componentizada, com criação, conclusão e filtro de tarefas.",
+    category: "Aplicação web · Projeto de estudo",
+    summary:
+      "Experiência de organização de tarefas construída com componentes reutilizáveis, tipagem estática e estados de interface bem definidos.",
+    highlights: [
+      "Criação e conclusão de tarefas",
+      "Filtros de visualização",
+      "Interface responsiva",
+    ],
     image: "/project-1.png",
     imageAlt: "Tela do Task App com a lista de tarefas",
     tags: ["React", "TypeScript", "Tailwind"],
   },
   {
-    title: "Portfólio",
-    description:
-      "Este portfólio: uma single page em Next.js com App Router, renderização estática, SEO e foco em acessibilidade.",
-    image: "/project-2.png",
-    imageAlt: "Tela inicial do portfólio",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    repoUrl: "https://github.com/dkzinbr/portfolio",
-  },
-  {
     title: "Landing Page",
-    description:
-      "Um presente para minha namorada e o primeiro projeto que fiz sozinho, do zero, só com HTML, CSS e JavaScript.",
+    category: "Landing page · Projeto autoral",
+    summary:
+      "Landing page desenvolvida do zero para praticar estrutura semântica, composição visual responsiva e interações sem frameworks.",
+    highlights: [
+      "HTML semântico",
+      "CSS responsivo",
+      "Interações em JavaScript",
+    ],
     image: "/project-3.png",
-    imageAlt: "Tela da landing page feita como presente",
+    imageAlt: "Tela de uma landing page autoral",
     tags: ["HTML", "CSS", "JavaScript"],
   },
 ];

@@ -13,10 +13,13 @@ export const profile = {
   role: "Desenvolvedor Full-stack",
   location: "São Paulo, Brasil",
   headline:
-    "Desenvolvedor full-stack focado em React, Next.js, TypeScript e Node.js, criando interfaces modernas, acessíveis e rápidas.",
+    "Construo produtos digitais claros, rápidos e confiáveis — da interface à integração com APIs.",
+  summary:
+    "Desenvolvedor full-stack com experiência prática em ambiente de startup, trabalhando com React, Next.js, TypeScript e Node.js.",
   availability: "Disponível para novas oportunidades",
   email: "henriteo23@gmail.com",
   whatsappNumber: "5511981798126",
+  resumeUrl: "/curriculo-henri-teodoro.pdf",
   links: {
     github: "https://github.com/dkzinbr",
     linkedin: "https://www.linkedin.com/in/henri-teodoro/",
@@ -31,23 +34,20 @@ export const whatsappLink = `https://api.whatsapp.com/send/?phone=${
   profile.whatsappNumber
 }&text=${encodeURIComponent(whatsappMessage)}&type=phone_number&app_absent=0`;
 
-export const stats = [
-  { value: "1+", label: "ano escrevendo código" },
-  { value: "10", label: "meses de experiência em start-up" },
-  { value: "8+", label: "tecnologias no dia a dia" },
+export const professionalFacts = [
+  { label: "Experiência", value: "10 meses em startup" },
+  { label: "Atuação", value: "Front-end e back-end" },
+  { label: "Base", value: profile.location },
 ] as const;
 
 export const bio = [
-  "Opa, esse aqui na foto sou eu! Tenho 23 anos e sou desenvolvedor há cerca de um ano. Trabalhei em uma start-up por 10 meses e foi onde me desenvolvi bastante, pegando desde tela até integração com API.",
-  "Nesse meio tempo me tornei pai de um menino lindo, o Klaus, e isso me motivou ainda mais a crescer profissionalmente para proporcionar uma vida melhor para ele.",
-  "Sempre fui muito ligado a tecnologia: desde pequeno adorava desmontar aparelhos eletrônicos para entender como funcionavam e mexia em pastas e arquivos para melhorar o desempenho dos jogos. Um início lindo de nerd raiz.",
+  "Sou desenvolvedor full-stack de São Paulo e encontrei no software uma forma de transformar curiosidade em produtos úteis. Minha experiência em startup consolidou uma abordagem prática: entender o problema, construir com clareza e evoluir a solução a partir de feedback.",
+  "Atuo entre interface e back-end, com atenção especial à experiência de uso, responsividade, acessibilidade e código legível. Busco equipes que valorizem colaboração, qualidade técnica e aprendizado contínuo.",
 ] as const;
 
 export const navItems = [
-  { href: "#home", label: "Home" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#habilidades", label: "Hard skills" },
-  { href: "#softskills", label: "Soft skills" },
   { href: "#projetos", label: "Projetos" },
-  { href: "#contato", label: "Contato" },
+  { href: "#experiencia", label: "Experiência" },
+  { href: "#competencias", label: "Competências" },
+  { href: "#sobre", label: "Sobre" },
 ] as const;

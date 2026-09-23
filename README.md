@@ -48,21 +48,27 @@ app/
 src/
   components/
     layout/             # header (menu mobile + scrollspy), footer, brilho de fundo
-    sections/           # hero, sobre, hard skills, soft skills, projetos, contato
+    sections/           # hero, projetos, experiência, competências, sobre e contato
     ui/                 # Section, Eyebrow e Reveal (animação de entrada)
-  data/                 # conteúdo editável: perfil, projetos e skills
+  data/                 # conteúdo editável: perfil, projetos, experiência e skills
+  resume/               # fonte HTML do currículo
   lib/                  # utilitários de classe/estilo
+public/
+  curriculo-henri-teodoro.pdf # currículo disponível para download
 ```
 
 ## Como atualizar o conteúdo
 
 Nada de conteúdo fica escrito dentro dos componentes. Para atualizar o portfólio, edite:
 
-- `src/data/profile.ts` — nome, cargo, bio, localização, contatos, redes, números de destaque e itens do menu.
-- `src/data/projects.ts` — projetos exibidos. `repoUrl` e `liveUrl` são opcionais: os botões "Código" e "Ver online" só aparecem quando preenchidos.
-- `src/data/skills.ts` — hard skills (agrupadas por área, com ícone e cor) e soft skills.
+- `src/data/profile.ts` — nome, cargo, bio, localização, contatos, redes, fatos profissionais e itens do menu.
+- `src/data/projects.ts` — projetos exibidos, destaques técnicos e links opcionais de código/deploy.
+- `src/data/experience.ts` — experiência profissional e princípios de trabalho.
+- `src/data/skills.ts` — competências agrupadas por área e práticas de desenvolvimento.
 
 Imagens ficam em `public/`. Ao trocar uma imagem de projeto, mantenha a proporção aproximada de 16/10 para não aparecer corte estranho no card.
+
+O currículo em PDF é gerado a partir de `src/resume/curriculo.html`; ao alterar o conteúdo profissional, os dois arquivos devem ser atualizados juntos.
 
 ## Acessibilidade e SEO
 

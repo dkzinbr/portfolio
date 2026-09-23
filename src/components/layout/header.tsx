@@ -6,7 +6,13 @@ import { FaBars, FaXmark } from "react-icons/fa6";
 import { navItems } from "@/src/data/profile";
 import { cn } from "@/src/lib/ui";
 
-const sectionIds = navItems.map((item) => item.href.replace("#", ""));
+const mobileNavItems = [
+  { href: "#home", label: "Início" },
+  ...navItems,
+  { href: "#contato", label: "Contato" },
+] as const;
+
+const sectionIds = mobileNavItems.map((item) => item.href.replace("#", ""));
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,22 +70,22 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 -mx-6 px-6 transition duration-300 md:-mx-10 md:px-10",
-        scrolled && "border-b border-line/70 bg-night/85 backdrop-blur-md",
+        "sticky top-0 z-50 -mx-6 px-6 transition duration-300 md:-mx-10 md:px-10 lg:-mx-12 lg:px-12",
+        scrolled && "border-b border-line/70 bg-night/90 backdrop-blur-xl",
       )}
     >
-      <div className="flex items-center justify-between py-5">
+      <div className="flex items-center justify-between py-4">
         <a
           href="#home"
-          className="text-lg font-semibold tracking-wide text-white"
+          className="font-mono text-lg font-semibold tracking-[-0.04em] text-white"
           aria-label="Ir para o início"
         >
-          {"<"}Henri <span className="text-brand">/</span>
-          {">"}
+          HT<span className="text-brand">.</span>
         </a>
 
-        <nav aria-label="Navegação principal" className="hidden md:block">
-          <ul className="flex items-center gap-6">
+        <div className="hidden items-center gap-6 md:flex">
+          <nav aria-label="Navegação principal">
+            <ul className="flex items-center gap-6">
             {navItems.map((item) => {
               const isActive = activeSection === item.href.replace("#", "");
 
@@ -90,7 +96,7 @@ export default function Header() {
                     aria-current={isActive ? "true" : undefined}
                     className={cn(
                       "relative text-sm transition hover:text-brand-light",
-                      isActive ? "text-brand-light" : "text-slate-300",
+                      isActive ? "text-brand-light" : "text-muted",
                     )}
                   >
                     {item.label}
@@ -105,8 +111,16 @@ export default function Header() {
                 </li>
               );
             })}
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+
+          <a
+            href="#contato"
+            className="rounded-lg border border-line bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white transition hover:border-brand/60 hover:bg-brand/10 hover:text-brand-light"
+          >
+            Fale comigo
+          </a>
+        </div>
 
         <button
           type="button"
@@ -127,7 +141,7 @@ export default function Header() {
           className="animate-menu-in mb-4 rounded-2xl border border-line bg-surface/95 p-2 backdrop-blur-md md:hidden"
         >
           <ul className="flex flex-col">
-            {navItems.map((item) => {
+            {mobileNavItems.map((item) => {
               const isActive = activeSection === item.href.replace("#", "");
 
               return (
