@@ -1,15 +1,38 @@
-export const experience = {
-  role: "Desenvolvimento full-stack",
-  organization: "Startup de tecnologia",
-  duration: "10 meses de experiência",
-  description:
-    "Atuação em um ambiente de entregas rápidas, participando da construção de interfaces, integração com APIs e evolução de funcionalidades.",
-  activities: [
-    "Desenvolvimento e manutenção de interfaces responsivas.",
-    "Integração entre front-end e APIs.",
-    "Investigação de problemas e evolução contínua de funcionalidades.",
-    "Colaboração em um ambiente dinâmico, do entendimento à entrega.",
-  ],
+export const experiences = [
+  {
+    role: "Assistente de TI",
+    organization: "ADC Benefícios",
+    location: "São Paulo, SP",
+    period: "mai 2026 — jul 2026",
+    description:
+      "Atuação em suporte técnico, análise de dados e desenvolvimento de ferramentas internas.",
+    activities: [
+      "Suporte técnico às rotinas da empresa.",
+      "Análise e organização de dados operacionais.",
+      "Criação de uma plataforma de BI para gestão de indicadores.",
+    ],
+  },
+  {
+    role: "Desenvolvedor de Software",
+    organization: "Nexo Sistemas",
+    location: "Remoto",
+    period: "fev 2025 — dez 2025",
+    description:
+      "Desenvolvimento de aplicações web e evolução de produtos em um ambiente remoto.",
+    activities: [
+      "Implementação e manutenção de funcionalidades.",
+      "Construção de interfaces para aplicações web.",
+      "Entrega de soluções alinhadas às necessidades dos clientes.",
+    ],
+  },
+] as const;
+
+export const education = {
+  course: "Análise e Desenvolvimento de Sistemas",
+  institution: "FIAP",
+  modality: "EAD",
+  period: "ago 2026 — previsão ago 2028",
+  status: "Cursando",
 } as const;
 
 export const workingPrinciples = [
