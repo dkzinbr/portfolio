@@ -44,7 +44,7 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               <a
                 href={profile.links.linkedin}
                 target="_blank"
@@ -67,7 +67,20 @@ export default function Contact() {
                   Currículo em PDF
                 </span>
                 <span className="font-mono text-[0.6rem] uppercase tracking-wider text-slate-500">
-                  Download
+                  PT
+                </span>
+              </a>
+              <a
+                href={profile.resumeUrlEn}
+                download
+                className="flex items-center justify-between rounded-xl border border-line bg-white/[0.03] px-5 py-4 text-sm font-medium text-slate-200 transition hover:border-brand/50 hover:bg-brand/[0.06] hover:text-white"
+              >
+                <span className="flex items-center gap-3">
+                  <FaDownload aria-hidden="true" className="text-brand-light" />
+                  Currículo em inglês
+                </span>
+                <span className="font-mono text-[0.6rem] uppercase tracking-wider text-slate-500">
+                  EN
                 </span>
               </a>
               <a

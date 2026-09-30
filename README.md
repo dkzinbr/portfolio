@@ -54,7 +54,8 @@ src/
   resume/               # fonte HTML do currículo
   lib/                  # utilitários de classe/estilo
 public/
-  curriculo-henri-teodoro.pdf # currículo disponível para download
+  curriculo-henri-teodoro.pdf    # currículo em português
+  curriculo-henri-teodoro-en.pdf # currículo em inglês
 ```
 
 ## Como atualizar o conteúdo
@@ -68,7 +69,7 @@ Nada de conteúdo fica escrito dentro dos componentes. Para atualizar o portfól
 
 Imagens ficam em `public/`. Ao trocar uma imagem de projeto, mantenha a proporção aproximada de 16/10 para não aparecer corte estranho no card.
 
-O currículo em PDF é gerado a partir de `src/resume/curriculo.html`; ao alterar o conteúdo profissional, os dois arquivos devem ser atualizados juntos.
+O currículo em PDF é gerado a partir de `src/resume/curriculo.html` (português) e `src/resume/curriculo-en.html` (inglês); ao alterar o conteúdo profissional, o HTML e o PDF de cada idioma devem ser atualizados juntos.
 
 ## Acessibilidade e SEO
 

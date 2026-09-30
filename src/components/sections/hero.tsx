@@ -52,6 +52,15 @@ export default function Hero() {
             <FaDownload aria-hidden="true" className="text-xs" />
             Baixar currículo
           </a>
+
+          <a
+            href={profile.resumeUrlEn}
+            download
+            className="inline-flex items-center gap-2 rounded-lg border border-line bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-brand/60 hover:text-brand-light"
+          >
+            <FaDownload aria-hidden="true" className="text-xs" />
+            Currículo em inglês
+          </a>
         </div>
 
         <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3">

@@ -20,6 +20,7 @@ export const profile = {
   email: "henriteo23@gmail.com",
   whatsappNumber: "5511981798126",
   resumeUrl: "/curriculo-henri-teodoro.pdf",
+  resumeUrlEn: "/curriculo-henri-teodoro-en.pdf",
   links: {
     github: "https://github.com/dkzinbr",
     linkedin: "https://www.linkedin.com/in/henri-teodoro/",
