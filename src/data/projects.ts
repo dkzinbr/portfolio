@@ -14,8 +14,56 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Pirate Battle",
+    category: "Jogo web · Desafio técnico · 2026",
+    summary:
+      "Shooter naval 2D jogável no navegador, com simulação em TypeScript puro a 120 Hz separada da renderização em PixiJS e das telas em React.",
+    highlights: [
+      "Simulação desacoplada do React e do renderizador",
+      "Ranking e histórico com TanStack Query, Axios e MSW",
+      "102 testes E2E com Playwright no desktop e no mobile",
+    ],
+    image: "/project-pirate-battle.png",
+    imageAlt: "Partida do Pirate Battle com o navio do jogador entre ilhas e navios inimigos",
+    tags: ["React", "TypeScript", "PixiJS", "TanStack Query", "Playwright"],
+    repoUrl: "https://github.com/dkzinbr/pirate-battle",
+    liveUrl: "https://pirate-battle-sigma-plum.vercel.app",
+  },
+  {
+    title: "Ritual Party",
+    category: "Aplicação full-stack · Uso real · 2026",
+    summary:
+      "App mobile-first usado em uma festa real: convidados confirmam presença, são sorteados em equipes e enviam fotos de missões que o anfitrião aprova ao vivo.",
+    highlights: [
+      "API em Express com Postgres (Neon) e upload de fotos",
+      "Painel do anfitrião protegido por PIN",
+      "78 testes automatizados com Vitest",
+    ],
+    image: "/project-ritual-party.png",
+    imageAlt: "Tela de entrada do Ritual Party com o formulário para entrar na festa",
+    tags: ["React", "TypeScript", "Express", "PostgreSQL", "Vitest"],
+    repoUrl: "https://github.com/dkzinbr/ritual-party",
+    liveUrl: "https://22evy.vercel.app",
+  },
+  {
+    title: "Pharma Pads ERP",
+    category: "Sistema de gestão · Full-stack · 2026",
+    summary:
+      "ERP para um pequeno negócio com clientes, fornecedores, produtos, estoque, vendas, compras e relatórios, com autenticação por JWT.",
+    highlights: [
+      "API REST com rotas do Next.js e validação com Zod",
+      "Modelagem de dados com Prisma e PostgreSQL",
+      "Dashboard com indicadores e gráficos",
+    ],
+    image: "/project-pharma-pads.png",
+    imageAlt: "Tela de login do ERP Pharma Pads",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Zod"],
+    repoUrl: "https://github.com/dkzinbr/pharma-pads",
+    liveUrl: "https://pharma-pads.vercel.app",
+  },
+  {
     title: "Luck’s Style",
-    category: "Site institucional · Negócio local · 2026",
+    category: "Site institucional · Cliente real · 2026",
     summary:
       "Experiência digital criada para uma barbearia real, conectando marca, equipe, serviços e canais de conversão em uma navegação responsiva.",
     highlights: [
@@ -26,7 +74,8 @@ export const projects: Project[] = [
     image: "/project-lucks-style.png",
     imageAlt: "Tela inicial do site da Barbearia Luck’s Style",
     tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://barbearialucksstyle.com",
+    repoUrl: "https://github.com/dkzinbr/luck-leads",
+    liveUrl: "https://barbearia-lucks-style.vercel.app",
   },
   {
     title: "Portfólio profissional",
@@ -43,19 +92,5 @@ export const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind"],
     repoUrl: "https://github.com/dkzinbr/portfolio",
     liveUrl: "https://portfolio-henri.vercel.app",
-  },
-  {
-    title: "Task App",
-    category: "Aplicação web · Projeto de estudo",
-    summary:
-      "Experiência de organização de tarefas construída com componentes reutilizáveis, tipagem estática e estados de interface bem definidos.",
-    highlights: [
-      "Criação e conclusão de tarefas",
-      "Filtros de visualização",
-      "Interface responsiva",
-    ],
-    image: "/project-1.png",
-    imageAlt: "Tela do Task App com a lista de tarefas",
-    tags: ["React", "TypeScript", "Tailwind"],
   },
 ];

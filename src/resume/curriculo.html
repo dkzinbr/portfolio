@@ -26,7 +26,7 @@
         width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 17mm 18mm 15mm;
+        padding: 15mm 18mm 12mm;
         background: white;
       }
 
@@ -35,7 +35,7 @@
         grid-template-columns: 1fr auto;
         gap: 12mm;
         align-items: end;
-        padding-bottom: 9mm;
+        padding-bottom: 7mm;
         border-bottom: 1px solid #dbe1ea;
       }
 
@@ -70,7 +70,7 @@
         display: grid;
         grid-template-columns: 31mm 1fr;
         gap: 8mm;
-        padding-top: 8mm;
+        padding-top: 6mm;
       }
 
       h2 {
@@ -102,8 +102,8 @@
       }
 
       .entry + .entry {
-        margin-top: 5mm;
-        padding-top: 5mm;
+        margin-top: 3mm;
+        padding-top: 3mm;
         border-top: 1px solid #eaecf0;
       }
 
@@ -157,7 +157,7 @@
       }
 
       footer {
-        margin-top: 8mm;
+        margin-top: 6mm;
         padding-top: 4mm;
         border-top: 1px solid #dbe1ea;
         color: #667085;
@@ -216,27 +216,35 @@
         <h2>Projetos</h2>
         <div>
           <div class="entry">
+            <h3 class="project-title">Pirate Battle</h3>
+            <span class="project-stack">React · TypeScript · PixiJS · Playwright</span>
+            <p class="muted">
+              Jogo naval 2D no navegador com simulação desacoplada da renderização,
+              ranking via TanStack Query e 102 testes E2E no desktop e no mobile.
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="project-title">Ritual Party</h3>
+            <span class="project-stack">React · Express · PostgreSQL · Vitest</span>
+            <p class="muted">
+              App full-stack usado em um evento real, com equipes, envio de fotos e painel
+              do anfitrião em tempo real; 78 testes automatizados.
+            </p>
+          </div>
+          <div class="entry">
+            <h3 class="project-title">Pharma Pads ERP</h3>
+            <span class="project-stack">Next.js · Prisma · PostgreSQL · Zod</span>
+            <p class="muted">
+              ERP com clientes, fornecedores, estoque, vendas, compras e relatórios, com API
+              REST e autenticação por JWT.
+            </p>
+          </div>
+          <div class="entry">
             <h3 class="project-title">Luck’s Style</h3>
             <span class="project-stack">Next.js · TypeScript · Tailwind CSS</span>
             <p class="muted">
               Site comercial responsivo com apresentação de equipe, planos e produtos,
               integrado a agendamento, WhatsApp e Google Maps.
-            </p>
-          </div>
-          <div class="entry">
-            <h3 class="project-title">Portfólio profissional</h3>
-            <span class="project-stack">Next.js · TypeScript · Tailwind CSS</span>
-            <p class="muted">
-              Plataforma pessoal com geração estática, SEO técnico, dados estruturados e
-              navegação acessível.
-            </p>
-          </div>
-          <div class="entry">
-            <h3 class="project-title">Task App</h3>
-            <span class="project-stack">React · TypeScript · Tailwind CSS</span>
-            <p class="muted">
-              Aplicação de tarefas com componentes reutilizáveis, filtros e estados de
-              interface tipados.
             </p>
           </div>
         </div>
@@ -254,8 +262,8 @@
             <p>HTML, CSS, JavaScript e Tailwind CSS</p>
           </div>
           <div>
-            <h3>Ferramentas</h3>
-            <p>Git e GitHub</p>
+            <h3>Back-end e ferramentas</h3>
+            <p>Express, PostgreSQL, Prisma, Vitest, Playwright e Git</p>
           </div>
           <div>
             <h3>Práticas</h3>

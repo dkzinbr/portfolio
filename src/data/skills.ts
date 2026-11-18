@@ -2,12 +2,20 @@ import type { IconType } from "react-icons";
 import {
   FaCss3Alt,
   FaGitAlt,
-  FaGithub,
   FaHtml5,
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import {
+  SiExpress,
+  SiJavascript,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiTailwindcss,
+  SiTypescript,
+  SiVitest,
+} from "react-icons/si";
 
 export type HardSkill = {
   name: string;
@@ -43,11 +51,14 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Fluxo de trabalho",
-    description: "Versionamento e colaboração ao longo das entregas.",
+    title: "Back-end, dados e testes",
+    description: "APIs, banco de dados e testes automatizados nos projetos full-stack.",
     skills: [
+      { name: "Express", icon: SiExpress, color: "#FFFFFF" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+      { name: "Prisma", icon: SiPrisma, color: "#FFFFFF" },
+      { name: "Vitest", icon: SiVitest, color: "#729B1B" },
       { name: "Git", icon: FaGitAlt, color: "#F05032" },
-      { name: "GitHub", icon: FaGithub, color: "#FFFFFF" },
     ],
   },
 ];
