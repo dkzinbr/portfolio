@@ -46,6 +46,22 @@ export const projects: Project[] = [
     liveUrl: "https://22evy.vercel.app",
   },
   {
+    title: "Estocke",
+    category: "Plataforma corporativa · Full-stack · 2026",
+    summary:
+      "Plataforma de pedidos, chamados de mal funcionamento e estoque para empresas. É a evolução de dois protótipos anteriores (OperaPlan e inventory).",
+    highlights: [
+      "Perfis de acesso: admin, supervisor e funcionário",
+      "Trilha de auditoria e troca de senha obrigatória no 1º acesso",
+      "API com rotas do Next.js, Prisma, PostgreSQL e JWT",
+    ],
+    image: "/project-estocke.png",
+    imageAlt: "Tela de login do Estocke, plataforma de gestão de estoque",
+    tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "JWT"],
+    repoUrl: "https://github.com/dkzinbr/estocke",
+    liveUrl: "https://estocke-adc.vercel.app",
+  },
+  {
     title: "Pharma Pads ERP",
     category: "Sistema de gestão · Full-stack · 2026",
     summary:
@@ -77,20 +93,5 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/dkzinbr/luck-leads",
     liveUrl: "https://barbearia-lucks-style.vercel.app",
   },
-  {
-    title: "Portfólio profissional",
-    category: "Produto pessoal · 2026",
-    summary:
-      "Plataforma pessoal criada para apresentar experiência, projetos e competências com uma navegação rápida e acessível.",
-    highlights: [
-      "App Router e geração estática",
-      "SEO técnico e dados estruturados",
-      "Navegação acessível e responsiva",
-    ],
-    image: "/project-portfolio-v2.png",
-    imageAlt: "Tela inicial do portfólio profissional de Henri Teodoro",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    repoUrl: "https://github.com/dkzinbr/portfolio",
-    liveUrl: "https://portfolio-henri.vercel.app",
-  },
+
 ];
