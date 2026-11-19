@@ -121,7 +121,7 @@ export default function Hero() {
             </div>
           </div>
           <p className="absolute -right-4 top-10 hidden rounded-lg border border-line bg-night/90 px-3 py-2 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-muted shadow-xl backdrop-blur md:block">
-            React · Next.js · Node.js
+            C# · .NET · React · Node.js
           </p>
         </div>
       </Reveal>

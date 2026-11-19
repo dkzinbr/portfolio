@@ -20,7 +20,7 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const title = `${profile.fullName} | Desenvolvedor Full-stack`;
+const title = `${profile.fullName} | Desenvolvedor Full Stack Júnior`;
 const description = `${profile.headline} ${profile.summary}`;
 
 export const metadata: Metadata = {
@@ -35,7 +35,9 @@ export const metadata: Metadata = {
   creator: profile.fullName,
   keywords: [
     profile.fullName,
-    "desenvolvedor full-stack",
+    "desenvolvedor full stack",
+    "desenvolvedor .NET",
+    "C#",
     "desenvolvedor front-end",
     "React",
     "Next.js",

@@ -18,15 +18,15 @@
         background: #eef1f5;
         color: #172033;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 10.5pt;
-        line-height: 1.45;
+        font-size: 9.6pt;
+        line-height: 1.4;
       }
 
       main {
         width: 210mm;
         min-height: 297mm;
         margin: 0 auto;
-        padding: 15mm 18mm 12mm;
+        padding: 12mm 16mm 10mm;
         background: white;
       }
 
@@ -35,13 +35,13 @@
         grid-template-columns: 1fr auto;
         gap: 12mm;
         align-items: end;
-        padding-bottom: 7mm;
+        padding-bottom: 5mm;
         border-bottom: 1px solid #dbe1ea;
       }
 
       h1 {
         margin: 0;
-        font-size: 29pt;
+        font-size: 26pt;
         line-height: 1;
         letter-spacing: -1.4px;
         color: #0b1020;
@@ -70,7 +70,7 @@
         display: grid;
         grid-template-columns: 31mm 1fr;
         gap: 8mm;
-        padding-top: 6mm;
+        padding-top: 4.5mm;
       }
 
       h2 {
@@ -97,13 +97,13 @@
 
       .lead {
         color: #344054;
-        font-size: 10.8pt;
-        line-height: 1.55;
+        font-size: 10pt;
+        line-height: 1.5;
       }
 
       .entry + .entry {
-        margin-top: 3mm;
-        padding-top: 3mm;
+        margin-top: 2.5mm;
+        padding-top: 2.5mm;
         border-top: 1px solid #eaecf0;
       }
 
@@ -120,19 +120,19 @@
       }
 
       ul {
-        margin: 3mm 0 0;
+        margin: 1.5mm 0 0;
         padding-left: 4.5mm;
       }
 
       li {
-        margin: 1mm 0;
+        margin: 0.6mm 0;
         color: #475467;
       }
 
       .skills {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 4mm 10mm;
+        gap: 2.5mm 10mm;
       }
 
       .skills h3 {
@@ -157,8 +157,8 @@
       }
 
       footer {
-        margin-top: 6mm;
-        padding-top: 4mm;
+        margin-top: 4mm;
+        padding-top: 3mm;
         border-top: 1px solid #dbe1ea;
         color: #667085;
         font-size: 8pt;
@@ -171,10 +171,10 @@
       <header>
         <div>
           <h1>Henri Teodoro</h1>
-          <p class="role">Desenvolvedor Full-stack</p>
+          <p class="role">Desenvolvedor Full Stack Júnior</p>
         </div>
         <div class="contact">
-          <span>São Paulo, Brasil</span>
+          <span>São Paulo, SP · remoto ou híbrido</span>
           <a href="mailto:henriteo23@gmail.com">henriteo23@gmail.com</a>
           <a href="https://www.linkedin.com/in/henri-teodoro/">
             linkedin.com/in/henri-teodoro
@@ -186,29 +186,44 @@
       <section>
         <h2>Perfil</h2>
         <p class="lead">
-          Desenvolvedor full-stack com experiência prática em ambiente de startup,
-          trabalhando com React, Next.js, TypeScript e Node.js. Atuo entre interface e
-          back-end, com atenção à experiência de uso, responsividade, acessibilidade e
-          código legível.
+          Desenvolvedor full stack júnior com 10 meses de experiência na Nexo Sistemas,
+          com C#, .NET e Node.js no back-end, PostgreSQL e React com TypeScript no
+          front-end. Busco vaga em .NET ou em React e Node.js.
         </p>
       </section>
 
       <section>
         <h2>Experiência</h2>
-        <div class="entry">
-          <div class="entry-head">
-            <div>
-              <h3>Desenvolvimento full-stack</h3>
-              <p class="muted">Startup de tecnologia</p>
+        <div>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h3>Desenvolvedor Full Stack (Trainee)</h3>
+                <p class="muted">Nexo Sistemas · Remoto</p>
+              </div>
+              <span class="meta">Fev 2025 a Nov 2025</span>
             </div>
-            <span class="meta">10 meses de experiência</span>
+            <ul>
+              <li>Desenvolvi aplicações web de controle financeiro para clientes, com C# e .NET no back-end e React com TypeScript no front-end.</li>
+              <li>Entreguei mais de 20 funcionalidades em produção em cerca de 3 projetos, incluindo o ERP próprio da empresa.</li>
+              <li>Construí e consumi APIs REST em .NET e Node.js, com dados em PostgreSQL.</li>
+              <li>Corrigi falhas relatadas pelos clientes; usei Docker e princípios SOLID.</li>
+            </ul>
           </div>
-          <ul>
-            <li>Desenvolvimento e manutenção de interfaces responsivas.</li>
-            <li>Integração entre front-end e APIs.</li>
-            <li>Investigação de problemas e evolução contínua de funcionalidades.</li>
-            <li>Colaboração em um ambiente dinâmico, do entendimento à entrega.</li>
-          </ul>
+          <div class="entry">
+            <div class="entry-head">
+              <div>
+                <h3>Assistente de TI</h3>
+                <p class="muted">ADC Benefícios · São Paulo</p>
+              </div>
+              <span class="meta">Mai 2026 a Jul 2026</span>
+            </div>
+            <ul>
+              <li>Desenvolvi o Estocke, sistema interno de pedidos, chamados e estoque, com Next.js, Prisma, PostgreSQL e JWT.</li>
+              <li>Mantive os painéis de Power BI da empresa, com indicadores diários de vendas e cancelamentos.</li>
+              <li>Tratei dados vindos de planilhas do sistema e prestei suporte técnico às áreas internas.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -219,40 +234,30 @@
             <h3 class="project-title">Pirate Battle</h3>
             <span class="project-stack">React · TypeScript · PixiJS · Playwright</span>
             <p class="muted">
-              Jogo naval 2D no navegador com simulação desacoplada da renderização,
-              ranking via TanStack Query e 102 testes E2E no desktop e no mobile.
+              Jogo naval 2D no navegador, com simulação separada da renderização e 102 testes
+              E2E no desktop e no mobile.
             </p>
           </div>
           <div class="entry">
             <h3 class="project-title">Ritual Party</h3>
             <span class="project-stack">React · Express · PostgreSQL · Vitest</span>
             <p class="muted">
-              App full-stack usado em um evento real, com equipes, envio de fotos e painel
-              do anfitrião em tempo real; 78 testes automatizados.
-            </p>
-          </div>
-          <div class="entry">
-            <h3 class="project-title">Estocke</h3>
-            <span class="project-stack">Next.js · Prisma · PostgreSQL · JWT</span>
-            <p class="muted">
-              Plataforma de pedidos, chamados e estoque para empresas, com perfis de acesso e
-              trilha de auditoria; evolução dos protótipos OperaPlan e inventory.
+              App full stack usado em um evento real, com equipes, envio de fotos e painel do
+              anfitrião; 78 testes automatizados.
             </p>
           </div>
           <div class="entry">
             <h3 class="project-title">Pharma Pads ERP</h3>
             <span class="project-stack">Next.js · Prisma · PostgreSQL · Zod</span>
             <p class="muted">
-              ERP com clientes, fornecedores, estoque, vendas, compras e relatórios, com API
-              REST e autenticação por JWT.
+              ERP com clientes, fornecedores, estoque, compras e vendas, com API REST e JWT.
             </p>
           </div>
           <div class="entry">
             <h3 class="project-title">Luck’s Style</h3>
             <span class="project-stack">Next.js · TypeScript · Tailwind CSS</span>
             <p class="muted">
-              Site comercial responsivo com apresentação de equipe, planos e produtos,
-              integrado a agendamento, WhatsApp e Google Maps.
+              Site para uma barbearia real, com agendamento, WhatsApp e Google Maps.
             </p>
           </div>
         </div>
@@ -262,22 +267,38 @@
         <h2>Competências</h2>
         <div class="skills">
           <div>
-            <h3>Stack principal</h3>
-            <p>TypeScript, React, Next.js e Node.js</p>
+            <h3>Back-end</h3>
+            <p>C#, .NET, Node.js, Express e APIs REST</p>
           </div>
           <div>
-            <h3>Interface</h3>
-            <p>HTML, CSS, JavaScript e Tailwind CSS</p>
+            <h3>Front-end</h3>
+            <p>React, Next.js, TypeScript, JavaScript e Tailwind CSS</p>
           </div>
           <div>
-            <h3>Back-end e ferramentas</h3>
-            <p>Express, PostgreSQL, Prisma, Vitest, Playwright e Git</p>
+            <h3>Dados</h3>
+            <p>PostgreSQL, SQL, Prisma e Power BI</p>
           </div>
           <div>
-            <h3>Práticas</h3>
-            <p>Responsividade, acessibilidade, componentização e integração com APIs</p>
+            <h3>Ferramentas e testes</h3>
+            <p>Git, Docker, Vitest e Playwright</p>
           </div>
         </div>
+      </section>
+
+      <section>
+        <h2>Formação</h2>
+        <div class="entry-head">
+          <div>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p class="muted">FIAP · EAD · em andamento</p>
+          </div>
+          <span class="meta">Ago 2026 a Ago 2028</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <p>Português nativo · Inglês básico, com leitura de documentação técnica</p>
       </section>
 
       <footer>

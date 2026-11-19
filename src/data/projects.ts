@@ -31,7 +31,7 @@ export const projects: Project[] = [
   },
   {
     title: "Ritual Party",
-    category: "Aplicação full-stack · Uso real · 2026",
+    category: "Aplicação full stack · Uso real · 2026",
     summary:
       "App mobile-first usado em uma festa real: convidados confirmam presença, são sorteados em equipes e enviam fotos de missões que o anfitrião aprova ao vivo.",
     highlights: [
@@ -47,9 +47,9 @@ export const projects: Project[] = [
   },
   {
     title: "Estocke",
-    category: "Plataforma corporativa · Full-stack · 2026",
+    category: "Sistema interno · ADC Benefícios · 2026",
     summary:
-      "Plataforma de pedidos, chamados de mal funcionamento e estoque para empresas. É a evolução de dois protótipos anteriores (OperaPlan e inventory).",
+      "Sistema interno de pedidos, chamados de mau funcionamento e estoque que desenvolvi na ADC Benefícios. É a evolução de dois protótipos anteriores (OperaPlan e inventory). A demo pública usa dados fictícios.",
     highlights: [
       "Perfis de acesso: admin, supervisor e funcionário",
       "Trilha de auditoria e troca de senha obrigatória no 1º acesso",
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   },
   {
     title: "Pharma Pads ERP",
-    category: "Sistema de gestão · Full-stack · 2026",
+    category: "Sistema de gestão · Full stack · 2026",
     summary:
       "ERP para um pequeno negócio com clientes, fornecedores, produtos, estoque, vendas, compras e relatórios, com autenticação por JWT.",
     highlights: [

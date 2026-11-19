@@ -1,16 +1,30 @@
-export const experience = {
-  role: "Desenvolvimento full-stack",
-  organization: "Startup de tecnologia",
-  duration: "10 meses de experiência",
-  description:
-    "Atuação em um ambiente de entregas rápidas, participando da construção de interfaces, integração com APIs e evolução de funcionalidades.",
-  activities: [
-    "Desenvolvimento e manutenção de interfaces responsivas.",
-    "Integração entre front-end e APIs.",
-    "Investigação de problemas e evolução contínua de funcionalidades.",
-    "Colaboração em um ambiente dinâmico, do entendimento à entrega.",
-  ],
-} as const;
+export const experiences = [
+  {
+    role: "Desenvolvedor Full Stack (Trainee)",
+    organization: "Nexo Sistemas · Remoto",
+    duration: "Fev 2025 a Nov 2025",
+    description:
+      "Aplicações web de controle financeiro para clientes da empresa, incluindo o ERP próprio da Nexo.",
+    activities: [
+      "Back-end em C# e .NET, com APIs REST e dados em PostgreSQL.",
+      "Telas em React e TypeScript integradas às APIs em .NET e Node.js.",
+      "Mais de 20 funcionalidades em produção em cerca de 3 projetos.",
+      "Correção de falhas relatadas pelos clientes, com Docker e princípios SOLID.",
+    ],
+  },
+  {
+    role: "Assistente de TI",
+    organization: "ADC Benefícios · São Paulo",
+    duration: "Mai 2026 a Jul 2026",
+    description: "Desenvolvimento interno, dados e suporte de TI para as áreas da empresa.",
+    activities: [
+      "Desenvolvimento do Estocke, sistema interno de pedidos, chamados e estoque.",
+      "Painéis de Power BI com indicadores diários de vendas e cancelamentos.",
+      "Tratamento e análise de dados vindos de planilhas do sistema.",
+      "Suporte técnico às áreas internas.",
+    ],
+  },
+] as const;
 
 export const workingPrinciples = [
   {

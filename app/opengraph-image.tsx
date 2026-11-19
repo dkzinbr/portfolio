@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 import { profile } from "@/src/data/profile";
 
-export const alt = `${profile.fullName} — ${profile.role}`;
+export const alt = `${profile.fullName}, ${profile.role}`;
 
 export const size = {
   width: 1200,
@@ -38,7 +38,7 @@ export default function OpenGraphImage() {
             textTransform: "uppercase",
           }}
         >
-          PORTFÓLIO / DESENVOLVIMENTO FULL-STACK
+          PORTFÓLIO / DESENVOLVIMENTO FULL STACK
         </div>
 
         <div
@@ -73,7 +73,7 @@ export default function OpenGraphImage() {
             color: "#9aa4b5",
           }}
         >
-          React · Next.js · TypeScript · Node.js
+          C# · .NET · React · Next.js · Node.js
         </div>
       </div>
     ),

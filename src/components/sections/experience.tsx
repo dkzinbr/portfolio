@@ -2,18 +2,20 @@ import { FaCheck } from "react-icons/fa";
 
 import Reveal from "@/src/components/ui/reveal";
 import Section from "@/src/components/ui/section";
-import { experience, workingPrinciples } from "@/src/data/experience";
+import { experiences, workingPrinciples } from "@/src/data/experience";
 
 export default function Experience() {
   return (
     <Section
       id="experiencia"
       eyebrow="02 / Trajetória"
-      title="Experiência que fortaleceu minha base técnica."
-      description="O ambiente de startup me ensinou a navegar entre diferentes partes do produto, comunicar decisões e manter o foco na entrega."
+      title="Experiência em desenvolvimento e dados."
+      description="Desenvolvimento full stack em C#/.NET e React na Nexo Sistemas, e sistemas internos e indicadores na ADC Benefícios."
     >
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16">
-        <Reveal>
+        <div className="flex flex-col gap-6">
+        {experiences.map((experience, index) => (
+        <Reveal key={experience.organization} delay={index * 80}>
           <article className="relative overflow-hidden rounded-2xl border border-line bg-surface/55 p-7 md:p-9">
             <div
               aria-hidden="true"
@@ -52,6 +54,8 @@ export default function Experience() {
             </ul>
           </article>
         </Reveal>
+        ))}
+        </div>
 
         <Reveal delay={100}>
           <div>

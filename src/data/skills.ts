@@ -6,7 +6,9 @@ import {
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
 import {
+  SiDotnet,
   SiExpress,
   SiJavascript,
   SiNextdotjs,
@@ -34,6 +36,8 @@ export const skillGroups: SkillGroup[] = [
     title: "Stack principal",
     description: "Tecnologias que concentram meu desenvolvimento atual.",
     skills: [
+      { name: "C#", icon: TbBrandCSharp, color: "#9B4F96" },
+      { name: ".NET", icon: SiDotnet, color: "#512BD4" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
       { name: "React", icon: FaReact, color: "#61DAFB" },
       { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
@@ -52,7 +56,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Back-end, dados e testes",
-    description: "APIs, banco de dados e testes automatizados nos projetos full-stack.",
+    description: "APIs, banco de dados e testes automatizados nos projetos full stack.",
     skills: [
       { name: "Express", icon: SiExpress, color: "#FFFFFF" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
